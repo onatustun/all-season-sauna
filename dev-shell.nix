@@ -10,11 +10,10 @@
 
       packages = with pkgs; [
         alejandra
-        deno
         nil
         nodejs
-        nodePackages.prettier
         pnpm
+        prettier
         tailwindcss
         tailwindcss-language-server
         typescript-language-server

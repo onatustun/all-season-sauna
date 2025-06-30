@@ -6,7 +6,7 @@
 
     hooks = {
       alejandra.enable = true;
-      denofmt.enable = true;
+      prettier.enable = true;
     };
   };
 }
