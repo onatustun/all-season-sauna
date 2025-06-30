@@ -9,7 +9,9 @@ interface ThemeToggleProps {
   variant?: "dark" | "light";
 }
 
-export function ThemeToggle({ className, variant = "light" }: ThemeToggleProps) {
+export function ThemeToggle(
+  { className, variant = "light" }: ThemeToggleProps,
+) {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -21,7 +23,9 @@ export function ThemeToggle({ className, variant = "light" }: ThemeToggleProps) 
         className,
       )}
     >
-      {theme === "light" ? <LuMoonStar className="h-full w-full" /> : <LuSun className="h-full w-full" />}
+      {theme === "light"
+        ? <LuMoonStar className="h-full w-full" />
+        : <LuSun className="h-full w-full" />}
     </button>
   );
 }

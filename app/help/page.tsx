@@ -1,5 +1,5 @@
-import { Contact } from "@/components/sections/contact"
-import { FAQ } from "@/components/sections/faq"
+import { Contact } from "@/components/sections/contact";
+import { FAQ } from "@/components/sections/faq";
 
 export default function Help() {
   return (
@@ -7,5 +7,5 @@ export default function Help() {
       <FAQ />
       <Contact />
     </>
-  )
+  );
 }

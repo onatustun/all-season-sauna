@@ -1,6 +1,6 @@
-import { Hero } from "@/components/sections/hero"
-import { Intro } from "@/components/sections/intro"
-import { Benefits } from "@/components/sections/benefits"
+import { Hero } from "@/components/sections/hero";
+import { Intro } from "@/components/sections/intro";
+import { Benefits } from "@/components/sections/benefits";
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <Intro />
       <Benefits />
     </>
-  )
+  );
 }

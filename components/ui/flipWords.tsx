@@ -33,7 +33,13 @@ export const FlipWords = ({
     );
   }
 
-  return <FlipWordsAnimated words={words} duration={duration} className={className} />;
+  return (
+    <FlipWordsAnimated
+      words={words}
+      duration={duration}
+      className={className}
+    />
+  );
 };
 
 function FlipWordsAnimated({

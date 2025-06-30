@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
-import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-react";
+import useEmblaCarousel, {
+  type UseEmblaCarouselType,
+} from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -124,7 +126,10 @@ const CarouselItem = React.forwardRef<
       ref={ref}
       role="group"
       aria-roledescription="slide"
-      className={cn("min-w-0 shrink-0 grow-0 basis-full lg:basis-1/3 pl-4", className)}
+      className={cn(
+        "min-w-0 shrink-0 grow-0 basis-full lg:basis-1/3 pl-4",
+        className,
+      )}
       {...props}
     />
   );
@@ -182,10 +187,10 @@ const CarouselNext = React.forwardRef<
 CarouselNext.displayName = "CarouselNext";
 
 export {
-  type CarouselAPI,
   Carousel,
+  type CarouselAPI,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 };

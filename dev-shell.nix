@@ -10,6 +10,7 @@
 
       packages = with pkgs; [
         alejandra
+        deno
         nil
         nodejs
         nodePackages.prettier

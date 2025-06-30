@@ -18,7 +18,8 @@ const buttonVariants = cva(
       size: {
         default: "",
         icon: "h-9 w-9 p-0",
-        hero: "max-sm:text-lg text-sm lg:text-lg max-sm:w-full max-sm:rounded-xl max-sm:gap-4",
+        hero:
+          "max-sm:text-lg text-sm lg:text-lg max-sm:w-full max-sm:rounded-xl max-sm:gap-4",
       },
     },
     defaultVariants: {
@@ -29,7 +30,8 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   href?: string;
@@ -38,7 +40,16 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant, size, asChild = false, href, children, showArrow = false, ...props },
+    {
+      className,
+      variant,
+      size,
+      asChild = false,
+      href,
+      children,
+      showArrow = false,
+      ...props
+    },
     ref,
   ) => {
     const buttonContent = (
@@ -61,7 +72,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         React.createElement(
           Link,
           { href: href },
-          React.createElement("span", { className: buttonClasses }, buttonContent),
+          React.createElement(
+            "span",
+            { className: buttonClasses },
+            buttonContent,
+          ),
         ),
       );
     }

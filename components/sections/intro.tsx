@@ -13,14 +13,14 @@ import {
 
 export function Intro() {
   const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false })
+    Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false }),
   );
 
   const imageUrls = [
     "/stones-optimised.jpg",
     "/inside_sauna_light_source.jpg",
     "/outside_powerlines_night.jpg",
-    "/sauna_bts_outside-optimised.jpg"
+    "/sauna_bts_outside-optimised.jpg",
   ];
 
   return (
@@ -30,7 +30,10 @@ export function Intro() {
           The Sauna
         </h1>
 
-        <Carousel plugins={[plugin.current]} className="w-full bg-[url('/pattern.png')] bg-cover bg-center">
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full bg-[url('/pattern.png')] bg-cover bg-center"
+        >
           <CarouselContent>
             {imageUrls.map((imageUrl, index: number) => (
               <CarouselItem key={index}>
@@ -39,7 +42,7 @@ export function Intro() {
                     src={imageUrl}
                     alt="Slideshow Image"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                     className="object-center object-cover rounded-3xl lg:rounded-xl shadow-md"
                   />
                 </div>
